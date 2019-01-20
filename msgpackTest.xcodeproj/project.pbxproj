@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DBD8B1321F4372D004CD4C3 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD8B1221F4372D004CD4C3 /* main.c */; };
+		1DBD8B1A21F438A0004CD4C3 /* libmsgpackc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBD8B1921F438A0004CD4C3 /* libmsgpackc.a */; };
+		1DBD8B1C21F43903004CD4C3 /* simple_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD8B1B21F43903004CD4C3 /* simple_c.c */; };
+		1DBD8B1F21F43E0B004CD4C3 /* ex1.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBD8B1E21F43E0B004CD4C3 /* ex1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		1DBD8B0F21F4372D004CD4C3 /* msgpackTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = msgpackTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBD8B1221F4372D004CD4C3 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1DBD8B1921F438A0004CD4C3 /* libmsgpackc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmsgpackc.a; sourceTree = "<group>"; };
+		1DBD8B1B21F43903004CD4C3 /* simple_c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = simple_c.c; sourceTree = "<group>"; };
+		1DBD8B1D21F43E0B004CD4C3 /* ex1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ex1.h; sourceTree = "<group>"; };
+		1DBD8B1E21F43E0B004CD4C3 /* ex1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ex1.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBD8B1A21F438A0004CD4C3 /* libmsgpackc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +49,7 @@
 		1DBD8B0621F4372D004CD4C3 = {
 			isa = PBXGroup;
 			children = (
+				1DBD8B1921F438A0004CD4C3 /* libmsgpackc.a */,
 				1DBD8B1121F4372D004CD4C3 /* msgpackTest */,
 				1DBD8B1021F4372D004CD4C3 /* Products */,
 			);
@@ -57,7 +66,10 @@
 		1DBD8B1121F4372D004CD4C3 /* msgpackTest */ = {
 			isa = PBXGroup;
 			children = (
+				1DBD8B1B21F43903004CD4C3 /* simple_c.c */,
 				1DBD8B1221F4372D004CD4C3 /* main.c */,
+				1DBD8B1D21F43E0B004CD4C3 /* ex1.h */,
+				1DBD8B1E21F43E0B004CD4C3 /* ex1.c */,
 			);
 			path = msgpackTest;
 			sourceTree = "<group>";
@@ -118,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBD8B1F21F43E0B004CD4C3 /* ex1.c in Sources */,
 				1DBD8B1321F4372D004CD4C3 /* main.c in Sources */,
+				1DBD8B1C21F43903004CD4C3 /* simple_c.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +255,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB42365KKX;
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +269,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GB42365KKX;
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

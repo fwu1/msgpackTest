@@ -7,9 +7,11 @@
 //
 
 #include <stdio.h>
+#include "ex1.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
+    ex1();
     return 0;
 }
